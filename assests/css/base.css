@@ -23,6 +23,7 @@ html {
     line-height: 1.6rem;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 .grid {
@@ -146,6 +147,7 @@ html {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
+    position: relative;
 }
 .header__navbar-item--user img{
     margin-right: 5px;
@@ -154,15 +156,53 @@ html {
     height: 2.1rem;
 }
 
-
-.header__notify {
+.header__navbar-item--user:hover .header__navbar-user-info{
+    display: block;
+}
+.header__navbar-user-info{
     display: none;
     position: absolute;
+    top:120%;
+    right: 0;
+    width: 15rem;
+    background-color: var(--white-color);
+    z-index: 6;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 0px 2px #969696;
+    border-radius: 2px;
+    animation: ease 0.2s Grownt;
+    transform-origin: 80% 0px;
+}
+
+.header__navbar-user-info::before{
+    content: "";
+    border: 18px solid transparent;
+    border-bottom: 15px solid var(--white-color);
+    position: absolute;
+    right: 2rem;
+    top: -2.7rem;
+}
+.header__navbar-user-info .header__navbar-user-item{
+    padding: 13px 10px;
+    width: 100%;
+    color: black;
+}
+.header__navbar-user-info .header__navbar-user-item:hover {
+    color: rgb(3, 155, 91);
+    background-color: var(--hover-item);
+}
+ /* thông báo  */
+.header__notify {
+    display: none;  
+    position: absolute;
+    z-index: 99;
     cursor: default;
     top: 170%;
     right: 0;
     width: 400px;
-    background-color: #fcdcd3;
+    background-color: #faeae7;
     border: 1px solid rgb(197, 197, 197);
     transform-origin: 90% top;
     animation: Grownt ease-in 0.25s;
@@ -187,14 +227,7 @@ html {
     right: 40px;
 }
 
-@keyframes Grownt {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
+
 
 .header__navbar-itemHasNotify:hover .header__notify {
     display: block;
@@ -214,19 +247,21 @@ html {
     list-style: none;
     padding: 0px;
 }
-.header__notify-item {
+.header__notify-list .header__notify-item:hover {
+    background-color: var(--white-color);
 }
 .header__notify-link {
     display: flex;
     justify-content: center;
     text-decoration: none;
     color: var(--white-color);
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .header__notify-img {
-    width: 14%;
-    height: 12%;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 1px solid var(--border-box-color);
 }
 .header__notify-info {
     width: 80%;
@@ -447,6 +482,7 @@ html {
     width: 84rem;
     background-color: var(--white-color);
     border-radius: 2px;
+    position: relative;
 }
 .header__search--inner{
     width: 100%;
