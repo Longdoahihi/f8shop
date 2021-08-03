@@ -1,2 +1,10 @@
 /* Header with search  */
 
+@keyframes Grownt {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
