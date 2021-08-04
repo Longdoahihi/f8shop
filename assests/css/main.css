@@ -815,11 +815,13 @@ html {
     background-color: var(--white-color);
     
 }
+
 .home-product-item:hover {
     margin-top: 8px;
     box-shadow: 0px 0px 10px #eeecec;
     cursor: pointer;
 }
+
 .home-product-item__img{
     padding-top: 100%;
     background-size: contain;
