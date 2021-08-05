@@ -131,7 +131,7 @@
 }
 
 /* price char đ */
-.price a{
+.price span{
     font-size: 1.2rem;
     color: inherit;
 }
