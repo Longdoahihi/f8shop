@@ -1108,3 +1108,9 @@ html {
     font-size: 1.3rem;
     line-height: 2rem;
 }
+.footer  .footer-regist-item:last-child {
+    display: block;
+    width: 5.3rem;
+    height: 6.3rem;
+    overflow: hidden;
+}
