@@ -80,4 +80,4 @@ function renderProducts(data){
 }
 
 //render data
-// handleProduct(linkAPI);    
+handleProduct(linkAPI);     
