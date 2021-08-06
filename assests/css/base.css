@@ -135,3 +135,33 @@
     font-size: 1.2rem;
     color: inherit;
 }
+
+/* Pagination   */
+.home-pagination{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+.home-pagination-item{
+    margin-right: 2rem;
+}
+.home-pagination-link{
+    display: block;
+    text-decoration: none;
+    color: #ababab;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+.home-pagination-link:hover {
+    opacity: 0.8;
+}
+.home-pagination-item--active a{
+    background-color: var(--primary-color);
+    color: white;
+}

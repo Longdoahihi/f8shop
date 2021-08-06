@@ -24,39 +24,12 @@ function getData(callback){
             console.log("Error  !!!" + err);
         })
 }
-  
-// var Products = [
-//     {
-//         "id": 1,
-//         "url": "./assests/Image/product1.jpg",
-//         "title": "Trâm cài tóc đơn giản thanh lịch / Gim tóc mái KT13",
-//         "newPrice": "6.800",
-//         "oldPrice": "7.900",
-//         "percent": 10,
-//         "star": 5,
-//         "sold": "99",
-//         "origin": "Hà Nội"
-//        },
-//        {
-//         "id": 2,
-//         "url": "./assests/Image/product2.jpg",
-//         "title": "Băng Đô Cài Tóc Đính Ngọc Trai Đơn Giản Phong Cách Hàn Quốc",
-//         "newPrice": "12.000",
-//         "oldPrice": "24.000",
-//         "percent": 10,
-//         "star": 5,
-//         "sold": "2.8k",
-//         "origin": "Nước ngoài"
-//        }
-// ]
 
 function renderProducts(data){
     var listProduct = document.querySelector(".productRender");
     var totalProduct = 20;
     for (var i=0;i<=totalProduct-1;i++){
         var idProduct = Math.floor(Math.random() * 10);
-        console.log(idProduct);
-        
         document.querySelector(".productRender").innerHTML += `
         <div class="grid__column-2-4">
             <a class="home-product-item" href="#">
@@ -107,4 +80,4 @@ function renderProducts(data){
 }
 
 //render data
-handleProduct(linkAPI);   
+// handleProduct(linkAPI);    
